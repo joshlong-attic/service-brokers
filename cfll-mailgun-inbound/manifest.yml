@@ -4,7 +4,7 @@ applications:
   memory: 512M
   instances: 1
   host: cfll-mailgun-inbound
-  path: target/mailgun.jar
+  path: target/cfll-mailgun-inbound.jar
   # services:
   #   - cf-sendgrid
   env:

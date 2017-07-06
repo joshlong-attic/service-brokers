@@ -6,15 +6,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.RequestEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import sun.misc.Request;
 
 @Slf4j
 @RestController
 @SpringBootApplication
 public class WebApplication {
+
+    @GetMapping("/hi")
+    String hi (){
+        return "Hello";
+    }
 
     @RequestMapping("/inbound")
     public void inbound(RequestEntity<String> requestEntity) {
